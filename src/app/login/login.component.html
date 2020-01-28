@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+      <div class="card card-signin my-5">
+        <div class="card-body">
+          <h5 class="card-title text-center">Sign In</h5>
+          <h6 *ngIf="loginError" style="color: red; text-align: center">{{loginError}}</h6>
+            <div>
+              <label for="inputEmail">Email address</label>
+              <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus
+                [(ngModel)]="loginRequest.username">
+            </div>
+
+            <div>
+              <label for="inputPassword">Password</label>
+              <input type="password" id="inputPassword" class="form-control" placeholder="Password" required
+               [(ngModel)]="loginRequest.password" >
+            </div>
+            <hr>
+            <div>
+              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" (click)="onLogin()">Sign
+                in</button>
+              <button (click)="openRegisterForm()" class="btn btn-link" >Register Here...</button>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

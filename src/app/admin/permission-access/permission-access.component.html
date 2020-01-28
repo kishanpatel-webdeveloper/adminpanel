@@ -1,0 +1,55 @@
+<div class="row m-t-15">
+  <div class="col-md-6">
+    <div class="form-group row required">
+      <label class="control-label text-left col-md-4">Role :</label>
+      <div class="col-md-8">
+        <ng-select [virtualScroll]="true" [items]="permissionAccessService.arrayForIdAndNameOfRole" bindLabel="name"
+          bindValue="id" [(ngModel)]="permissionAccessService.selectedRoleId" placeholder="Select Role"
+          [clearable]="false" (ngModelChange)="permissionAccessService.changeRole()">
+        </ng-select>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+
+
+  <table [border]="1">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Object Name</th>
+        <th scope="col">Router Link</th>
+        <th scope="col">Can Read</th>
+        <th scope="col">Can Create</th>
+        <th scope="col">Can Delete</th>
+        <th scope="col">Can Update</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr mdbTableCol *ngFor="let element of permissionAccessService.arrayForPermissions; index as i">
+        <th scope="row">{{ i+1 }}</th>
+        <td>{{ element.name }}</td>
+        <td>{{ element.routerLink }}</td>
+        <td>{{ element.canRead }}</td>
+        <td>{{ element.canCreate }}</td>
+        <td>{{ element.canDelete }}</td>
+        <td>{{ element.canUpdate }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div>
+
+    <div>
+      <!-- <tree-node [node]="permissionAccessService.arrayForPermissions"></tree-node> -->
+      <!-- <tree-node></tree-node> -->
+    </div>
+
+    <!-- https://www.npmjs.com/package/angular-tree-component -->
+    <!-- <tree-root [nodes]="permissionAccessService.arrayForPermissions" [options]="options" (activate)="onEvent($event)" (toggleExpanded)="onExpand($event)">
+    </tree-root> -->
+
+  </div>
+
+</div>

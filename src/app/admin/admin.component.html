@@ -1,0 +1,26 @@
+<!-- <div id="header">
+  <app-header></app-header>
+</div>
+<div id="menu" class="sidemenu">
+  <app-menu [menuItems]="arrayForLoggedInUserPermissions"></app-menu>
+</div>
+<div id="content">
+  <p>
+   <router-outlet></router-outlet>
+  </p>
+</div>
+<div id="footer">
+  <app-footer></app-footer>
+</div> -->
+
+<div class="main-wrapper">
+  <app-menu></app-menu>
+  <div class="page-wrapper">
+    <app-header></app-header>
+    <div class="page-content">
+      <router-outlet></router-outlet>
+    </div>
+    <app-footer></app-footer>
+  </div>
+
+</div>
