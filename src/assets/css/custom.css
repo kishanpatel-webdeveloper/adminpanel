@@ -1,2 +1,23 @@
 @import url('https://fonts.googleapis.com/css?family=Overpass:300,400,600,700,800,900&display=swap');
 body{ font-family: 'Overpass', sans-serif; }
+
+
+/* Breadcrumbs CSS */
+.button-breadcrumb{ 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+/* Card CSS */
+.card .card-search { display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; }
+
+/* Table CSS */
+.table thead{ background-color: #f1f3fa }
+.table .table-action{ width: 130px; }
+.table .table-action.width150px{ width: 150px; }
+.table .action-icon { padding: 0 6px; }
+.table thead tr th, .table tbody tr td { color: #212529; }
